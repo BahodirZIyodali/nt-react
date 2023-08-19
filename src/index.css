@@ -312,7 +312,7 @@ header .nav img {
 }
 
 #kurslar .kurslar_wrapper {
-  display: flex;
+  display: flex; 
   gap: 33px;
 }
 
@@ -327,6 +327,7 @@ header .nav img {
   border: 1px solid #607987;
   border-radius: 4px;
 }
+
 
 #kurslar .kurslar_card h2 {
   font-family: "Lato Bold";
