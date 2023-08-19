@@ -29,8 +29,7 @@ const Help = () => {
     <section id="help">
       <div className="container">
         <div className="help_wrapper">
-          <img src={HelpImg} alt="image" />
-
+           <img src={HelpImg} id='help-img'  alt="image" />
           <div className="card_right">
             <div className="form">
               <h1>Yordam kerakmi?</h1>
