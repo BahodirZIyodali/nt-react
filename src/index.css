@@ -564,6 +564,7 @@ header .nav img {
 }
 
 #izohlar .izohlar_text {
+
   display: flex;
   flex-direction: column;
   gap: 7px;
@@ -584,7 +585,6 @@ header .nav img {
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
-  line-height: 22px;
   letter-spacing: -0.24px;
   color: #7cd1ac;
 }
@@ -596,6 +596,62 @@ header .nav img {
   font-size: 16px;
   line-height: 24px;
   color: #ffffff;
+}
+
+.comments_card1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px;
+  gap: 260px;
+  width: 224px;
+  height: 412px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.37) 69.5%, rgba(0, 0, 0, 0.65) 90.34%);
+  border-radius: 22px;
+  background-image: url(../src/assets/images/student1.png);
+  background-repeat: no-repeat;
+}
+
+.comments_card2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px;
+  gap: 260px;
+  width: 224px;
+  height: 412px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.37) 69.5%, rgba(0, 0, 0, 0.65) 90.34%);
+  border-radius: 22px;
+  background-image: url(../src/assets/images/student2.png);
+  background-repeat: no-repeat;
+}
+
+.comments_card3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px;
+  gap: 260px;
+  width: 224px;
+  height: 412px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.37) 69.5%, rgba(0, 0, 0, 0.65) 90.34%);
+  border-radius: 22px;
+  background-image: url(../src/assets/images/student3.png);
+  background-repeat: no-repeat;
+}
+
+.comments_card4 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px;
+  gap: 260px;
+  width: 224px;
+  height: 412px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.37) 69.5%, rgba(0, 0, 0, 0.65) 90.34%);
+  border-radius: 22px;
+  background-image: url(../src/assets/images/student4.png);
+  background-repeat: no-repeat;
 }
 
 /* ----IZOHLAR SECTION-END---- */
