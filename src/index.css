@@ -1,69 +1,1198 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+*::before,
+*::after {
+   margin: 0;
+    padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1182px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@font-face {
+  font-family: "Lato Regular";
+  src: url(/assets/fonts/Lato-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Lato Medium";
+  src: url(/assets/fonts/Lato-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Lato Bold";
+  src: url(/assets/fonts/Lato-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Lato SemiBold";
+  src: url(/assets/fonts/Lato-Semibold.ttf);
+}
+
+@font-face {
+  font-family: "Lato Heavy";
+  src: url(/assets/fonts/Lato-Heavy.ttf);
+}
+
+/* ----HEADER SECTION-START---- */
+
+header {
+  width: 100%;
+  background: #f1f0ee;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+header .nav {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Lato Medium";
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+header .nav__items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+header .nav__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 37px;
+}
+
+header .nav__list--item {
+  list-style-type: none;
+}
+
+header .nav__list--item-link {
+  text-decoration: none;
+  font-style: normal;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+header .nav__btn {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 100px;
+  padding: 11px 49.7px 11px 49.3px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  border: 1px solid #ffffff;
+  border: blue;
+  cursor: pointer;
 }
+
+header .nav button:hover {
+  border: 1px solid #bd8f5b;
+  background: ivory;
+  color: #000000;
+}
+
+header .nav img {
+  cursor: pointer;
+}
+
+/* ----HEADER SECTION-END---- */
+
+/* ----INTRO SECTION-START---- */
+
+#intro {
+  display: flex;
+  justify-content: center;
+  margin: 90px auto 0 auto;
+  align-items: center;
+  width: 100%;
+  height: 504px;
+  background-color: #f1f0ee;
+  background-image: url(/assets/images/div.hero\ wrapper.jpg);
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+
+#intro .intro_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 325px;
+  margin-left: 270px;
+  gap: 19px;
+}
+
+#intro h1 {
+  font-family: "Lato Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 56px;
+  letter-spacing: -0.8px;
+  color: #000;
+}
+
+#intro h1 span {
+  color: #ba8d5b;
+}
+
+#intro p {
+  font-family: "Lato SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.36px;
+  color: #607987;
+}
+
+#intro button {
+  padding: 13px 47.8px 13px 46px;
+  background: #ba8d5b;
+  border-radius: 100px;
+  border: 1px solid #ffffff;
+  font-family: "Lato Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+  margin-top: 51px;
+  cursor: pointer;
+}
+
+#intro button:hover {
+  border: 1px solid #bd8f5b;
+  background: #ffffff;
+  color: #000000;
+}
+
+/* ----INTRO SECTION-END---- */
+
+/* ----ADVANTAGES SECTION-START---- */
+
+#advantages {
+  width: 100%;
+  height: fit-content;
+}
+
+#advantages h1 {
+  font-family: "Lato Heavy";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.64px;
+  color: #0f1826;
+  margin: 48px 0;
+}
+
+#advantages .advantages_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+#advantages .advantages_card {
+  display: flex;
+  align-items: flex-start;
+  width: 536.63px;
+  height: 138px;
+  gap: 40px;
+}
+
+#advantages .advantages_card .advantages_text h2 {
+  font-family: "Lato Medium";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: -0.4px;
+  color: #0f1826;
+  margin-bottom: 14px;
+}
+
+#advantages .advantages_card .advantages_text p {
+  font-family: "Lato Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.28px;
+  color: #607987;
+}
+
+#advantages .more {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 21px;
+  margin: 30px 0 48px 0;
+}
+
+#advantages .more h3 {
+  font-family: "Lato SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.32px;
+  color: #0eb182;
+}
+
+#advantages .more img {
+  width: 24px;
+  height: 24px;
+  background: rgba(186, 141, 91, 0.1);
+  border-radius: 12px;
+}
+
+/* ----ADVANTAGES SECTION-END---- */
+
+/* ----KURSLAR SECTION-START---- */
+
+#kurslar {
+  width: 100%;
+  height: 361px;
+  background: #f9f8f7;
+  padding: 48px 0 51px 0;
+}
+
+#kurslar .kurslar_elements {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+
+#kurslar h1 {
+  font-family: "Lato Heavy";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 56px;
+  letter-spacing: -0.64px;
+  color: #0f1826;
+}
+
+#kurslar .kurslar_text {
+  font-family: "Lato SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #607987;
+}
+
+#kurslar .kurslar_wrapper {
+  display: flex;
+  gap: 33px;
+}
+
+#kurslar .kurslar_card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px 17px 17px;
+  gap: 12px;
+  width: 254.5px;
+  height: 97px;
+  border: 1px solid #607987;
+  border-radius: 4px;
+}
+
+#kurslar .kurslar_card h2 {
+  font-family: "Lato Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  letter-spacing: -0.4px;
+  color: #0f1826;
+}
+
+#kurslar .kurslar_card p {
+  font-family: "Lato Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.32px;
+  color: #607987;
+}
+
+#kurslar a {
+  font-family: "Lato Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #0eb182;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+/* ----KURSLAR SECTION-END---- */
+
+/* ----ISH_JOYLARI SECTION-START---- */
+
+#ish_joylari {
+  width: 100%;
+  height: auto;
+  padding: 48px 0;
+}
+
+#ish_joylari h1 {
+  font-family: "Lato Heavy";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 40px;
+  color: #0f1826;
+  margin-bottom: 24px;
+}
+
+#ish_joylari p {
+  font-family: "Lato SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #607987;
+}
+
+#ish_joylari .ish_joylari_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 31px;
+  flex-wrap: wrap;
+  margin: 48px 0 0 0;
+}
+
+#ish_joylari .ish_joylari_card {
+  padding: 16px 12px;
+  background: #f9f8f7;
+  border-radius: 8px;
+}
+
+#ish_joylari .ish_joylari_card img {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  transition: all 0.5s ease;
+}
+
+#ish_joylari .ish_joylari_card img:hover {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+/* ----ISH_JOYLARI SECTION-END---- */
+
+/* ----IZOHLAR SECTION-START---- */
+
+#izohlar {
+  width: 100%;
+  height: 686px;
+  padding: 40px 0 90px 0;
+}
+
+#izohlar h1 {
+  font-family: "Lato Heavy";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 40px;
+  color: #0f1826;
+  margin: 48px 0 24px 0;
+}
+
+#izohlar .commets_about {
+  font-family: "Lato SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #607987;
+}
+
+#izohlar .izohlar_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 51px;
+  margin-top: 48px;
+}
+
+#izohlar .izohlar_card1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px;
+  gap: 260px;
+  width: 224px;
+  height: 412px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.37) 69.5%,
+    rgba(0, 0, 0, 0.65) 90.34%
+  );
+  border-radius: 22px;
+  background-image: url(/assets/images/student1.png);
+  background-repeat: no-repeat;
+}
+
+#izohlar .izohlar_card2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px;
+  gap: 260px;
+  width: 224px;
+  height: 412px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.37) 69.5%,
+    rgba(0, 0, 0, 0.65) 90.34%
+  );
+  border-radius: 22px;
+  background-image: url(/assets/images/student2.png);
+  background-repeat: no-repeat;
+}
+
+#izohlar .izohlar_card3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px;
+  gap: 260px;
+  width: 224px;
+  height: 412px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.37) 69.5%,
+    rgba(0, 0, 0, 0.65) 90.34%
+  );
+  border-radius: 22px;
+  background-image: url(/assets/images/student3.png);
+  background-repeat: no-repeat;
+}
+
+#izohlar .izohlar_card4 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px;
+  gap: 260px;
+  width: 224px;
+  height: 412px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.37) 69.5%,
+    rgba(0, 0, 0, 0.65) 90.34%
+  );
+  border-radius: 22px;
+  background-image: url(/assets/images/student4.png);
+  background-repeat: no-repeat;
+}
+
+#izohlar .watch,
+#izohlar a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  background: #ffffff;
+  border-radius: 100px;
+  padding: 6px;
+  transition: all 0.5s ease;
+}
+
+#izohlar .watch .video_link,
+#izohlar a .video_link {
+  font-family: "Lato Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 22px;
+  color: #000000 !important;
+}
+
+#izohlar .watch span,
+#izohlar a span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  background: #ba8d5b;
+  border-radius: 14px;
+}
+
+#izohlar .izohlar_text {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+#izohlar .izohlar_text .date {
+  font-family: "Lato SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: -0.24px;
+  color: #ffffff;
+}
+
+#izohlar .izohlar_text .job {
+  font-family: "Lato SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: -0.24px;
+  color: #7cd1ac;
+}
+
+#izohlar .izohlar_text h4 {
+  font-family: "Lato Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+/* ----IZOHLAR SECTION-END---- */
+
+/* ----HELP SECTION-START---- */
+
+#help {
+  width: 100%;
+  height: auto;
+  padding: 20px 0 98px 0;
+}
+
+#help h1 {
+  font-family: "Lato SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 40px;
+  color: #0f1826;
+}
+
+#help .help_wrapper {
+  display: flex;
+  background: #f9f8f7;
+  border-radius: 20px;
+  gap: 32px;
+}
+
+#help .help_wrapper .card_right {
+  padding: 32px 126px 32px 32px;
+}
+
+#help .help_wrapper .card_right .form {
+  padding: 45px 47px 45px 40px;
+}
+
+#help .help_wrapper .card_right .form .form_text {
+  font-family: "Lato Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #607987;
+  margin: 16px 0 32px 0;
+}
+
+#help .help_wrapper .card_right .form .form_text span {
+  color: #ba8d5b;
+}
+
+#help .help_wrapper .card_right .form .forms {
+  padding: 14px 17px;
+  width: 368px;
+  background: #ffffff;
+  border: 1px solid #dadada;
+  border-radius: 100px;
+}
+
+#help .help_wrapper .card_right .form .name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+#help .help_wrapper .card_right .form .name p {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.28px;
+  color: rgba(0, 0, 0, 0.35);
+}
+
+#help .help_wrapper .card_right .form .pn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+#help .help_wrapper .card_right .form .pn .phone_n-input_t {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.28px;
+  color: rgba(0, 0, 0, 0.35);
+}
+
+#help .help_wrapper .card_right .form .request_text {
+  font-family: "Lato SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  margin: 32px 0 22px 0;
+}
+
+#help .help_wrapper .card_right .form .request_text span {
+  color: #ba8d5b;
+}
+
+#help .help_wrapper .card_right .form .request {
+  padding: 13px 129.16px 13px 128.84px;
+  background: #ba8d5b;
+  border-radius: 100px;
+  border: 1px solid #ffffff;
+  font-family: "Lato Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+#help .help_wrapper .card_right .form button:hover {
+  border: 1px solid #bd8f5b;
+  background: #ffffff;
+  color: #000000;
+  cursor: pointer;
+}
+
+/* ----HELP SECTION-END---- */
+
+/* ----FOOTER SECTION-START---- */
+
+footer {
+  width: 100%;
+  height: 700px;
+  background: #f9f8f7;
+}
+
+footer .footer_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 50px;
+  /* padding-bottom: 50px; */
+}
+
+footer .top_card {
+  display: flex;
+  flex-direction: column;
+  width: 239px;
+  gap: 28px;
+}
+
+footer .top_card p {
+  font-family: "Lato SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  color: #607987;
+}
+
+footer .footer_card {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .footer_card h1 {
+  font-family: "Lato Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.32px;
+  text-transform: capitalize;
+  color: #0f1826;
+  margin-bottom: 32px;
+}
+
+footer .footer_card a {
+  text-decoration: none;
+  font-family: "Lato SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 32px;
+  letter-spacing: -0.28px;
+  color: #607987;
+  transition: all 0.5s ease;
+}
+
+footer hr {
+  margin-left: 265px;
+}
+
+footer .bottom_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 34px;
+  padding-bottom: 100px;
+}
+
+footer .footer_card_bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+footer .footer_card_bottom h1 {
+  font-family: "Lato Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.32px;
+  color: #0f1826;
+}
+
+footer .footer_card_bottom ul {
+  display: flex;
+  padding: 0;
+  gap: 12px;
+}
+
+footer .footer_card_bottom a,
+footer .footer_card_bottom p {
+  font-family: "Lato SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.28px;
+  color: #607987;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+footer .footer_card_bottom .raqam {
+  font-family: "Lato Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.36px;
+  color: #607987;
+}
+
+/* ----FOOTER SECTION-END---- */
+
+/* ----HOVER VA BIRNIMALA-START---- */
+
+.btn_white:hover {
+  border: 1px solid #bd8f5b !important;
+  background: transparent !important;
+  color: brown !important;
+}
+
+.btn_white:active {
+  background: #bd8f5b;
+  font-family: "Lato Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+a:hover {
+  text-decoration: underline !important;
+  color: brown !important;
+}
+
+/* ----HOVER VA BIRNIMALA-END---- */
+
+
+/* ----BLOG PAGE-START---- */
+
+#blog {
+  margin-top: 164px;
+}
+
+#blog .road {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 32px 0;
+}
+
+#blog .road .back {
+  font-family: "Lato Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #c4c4c4;
+}
+
+#blog .road .kurslar {
+  font-family: "Lato Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ba8d5b;
+}
+
+#blog .btns {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+#blog .btns button {
+  padding: 16px 25.05px 16px;
+  background: #f7f7f5;
+  border-radius: 32px;
+  border: 1px solid #f7f7f5;
+  cursor: pointer;
+  font-family: "Lato SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#blog .blog_wrapper {
+  margin: 0 0 0 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 342.8px);
+  grid-template-rows: repeat(2, 329px);
+  gap: 48px;
+}
+
+#blog .blog_wrapper .blog_card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 26px;
+  width: 342.8px;
+  height: fit-content;
+}
+
+#blog .blog_wrapper .blog_card .header {
+  width: 342.33px;
+  height: 182px;
+  position: relative;
+}
+
+#blog .blog_wrapper .blog_card .header a {
+  text-decoration: none;
+  position: absolute;
+  width: fit-content;
+  padding: 5px 14.2px 5px 12px;
+  background: #fafafa;
+  box-shadow: 0px 0px 2px #000000;
+  border-radius: 4px;
+  left: 8px;
+  top: 8px;
+  font-family: "Lato SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+}
+
+#blog .blog_wrapper .blog_card .body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 14px;
+}
+
+#blog .blog_wrapper .blog_card .body h2 {
+  font-family: "Lato Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  color: #000000;
+}
+
+#blog .blog_wrapper .blog_card .body p {
+  font-family: "Lato Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#blog .blog_wrapper .blog_card .body .date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 342.8px;
+}
+
+#blog .blog_wrapper .blog_card .body .date .watched {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+#blog button {
+  display: flex;
+  justify-content: center;
+  padding: 13px 47.3px 13px 46px;
+  background: #ba8d5b;
+  border-radius: 100px;
+  font-family: "Lato Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+  margin: 48px auto;
+  border: 1px solid #bd8f5b;
+  cursor: pointer;
+}  
+
+/* ----BLOG PAGE-END---- */
+
+/* ----QAYSI PAGE EDI ENDI BU---- */
+/* ----KURSLAR PAGE-START---- */
+
+#hamma_kurslar {
+  margin-top: 165px;
+}
+
+#hamma_kurslar .road {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 64px 0;
+}
+
+#hamma_kurslar .road .back {
+  font-family: "Lato Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #c4c4c4;
+}
+
+#hamma_kurslar .road .kurslar {
+  font-family: "Lato Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ba8d5b;
+}
+
+#hamma_kurslar .title_input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+#hamma_kurslar .title_input h1 {
+  font-family: "Lato Hard";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 56px;
+  letter-spacing: -0.64px;
+  color: #0f1826;
+}
+
+#hamma_kurslar .title_input .search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f7f7f5;
+  border-radius: 100px;
+  padding: 15px;
+  gap: 150px;
+}
+
+#hamma_kurslar .title_input .search input {
+  border: none;
+  background: #f7f7f5;
+}
+
+#hamma_kurslar .btns {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  margin-bottom: 72px;
+}
+
+#hamma_kurslar .btns button {
+  padding: 16px 25.05px 16px;
+  background: #f7f7f5;
+  border-radius: 32px;
+  border: 1px solid #f7f7f5;
+  cursor: pointer;
+  font-family: "Lato SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#hamma_kurslar .kurslar_wrapper1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 31px;
+  padding: 0 31px 32px 0;
+  margin-bottom: 16px;
+}
+
+#hamma_kurslar .kurslar_wrapper1 .kurslar_card1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 29px;
+  width: 543.5px;
+  height: 314px;
+  background: #f9f8f7;
+  border-radius: 4px;
+  padding: 24px;
+}
+
+#hamma_kurslar .kurslar_wrapper1 .kurslar_card1 .kurslar_card-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+}
+
+#hamma_kurslar .kurslar_wrapper1 .kurslar_card1 .kurslar_card-top .category {
+  padding: 5px 12.91px 5px 12px;
+  background: #d1d1d1;
+  border-radius: 4px;
+  font-family: "Lato Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+}
+
+#hamma_kurslar .kurslar_wrapper1 .kurslar_card1 .kurslar_card-top p {
+  font-family: "Lato Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #b1732b;
+}
+
+#hamma_kurslar .kurslar_wrapper1 .kurslar_card1 .kurslar_card-top p span {
+  color: #ba8d5b;
+}
+
+#hamma_kurslar .kurslar_wrapper1 .kurslar_card1 .kurslar_card_bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+#hamma_kurslar .kurslar_wrapper1 .kurslar_card1 .kurslar_card_bottom h2 {
+  font-family: "Lato Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: -0.56px;
+  color: #000000;
+  margin-bottom: 24px;
+}
+
+#hamma_kurslar .kurslar_wrapper1 .kurslar_card1 .kurslar_card_bottom p {
+  font-family: "Lato Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.28px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* ----KURSLAR PAGE-START---- */
+
