@@ -40,7 +40,7 @@ const Intro = () => {
         <button className="intro_btn .btn_white">Kurslarni ko‘rish</button>
       </div>
 
-      <img src={Bg} alt="" />
+      <img src={Bg} className='bg-img' alt="" />
     </section>
   );
 };
