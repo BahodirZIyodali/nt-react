@@ -8,7 +8,7 @@ const Intro = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
-    }, 4000); 
+    }, 2000); 
 
     return () => clearInterval(interval);
   }, []);
@@ -16,15 +16,14 @@ const Intro = () => {
   return (
     <section id="intro">
       <div className="intro_text">
+      <h1>Kasblarni</h1>
         <h1>
-        kasblarni
           {texts.map((text, index) => (
             <span
               key={index}
               className={`animated-text ${
                 textIndex === index ? 'show' : 'hide'
               }`}
-              style={{ animationDelay: `${index * 0.9}s` }} 
             >
               {text}
             </span>
