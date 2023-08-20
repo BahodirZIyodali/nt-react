@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import laptopBlueImage from '../assets/images/laptop_blue.png';
-import laptopOrangeImage from '../assets/images/laptop_orange.png';
 
 const CoursesPage = () => {
   const [courses, setCourses] = useState([]);
@@ -13,7 +11,7 @@ const CoursesPage = () => {
 
   const fetchCourses = async () => {
     try {
-      const response = await axios.get('http://localhost:4000/get'); // Adjust the URL based on your API endpoints
+      const response = await axios.get('https://ntbackend.onrender.com/get'); // Adjust the URL based on your API endpoints
       setCourses(response.data);
     } catch (error) {
       console.error('Error fetching courses:', error.response.data);
