@@ -1,6 +1,10 @@
 import React from 'react';
 import emailjs from 'emailjs-com';
 import HelpImg from '../assets/images/help.png'
+import { toast,  ToastContainer 
+} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Help = () => {
   const sendEmail = (e) => {
@@ -8,17 +12,17 @@ const Help = () => {
 
     emailjs
       .sendForm(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
+        'service_077vcwv',
+        'template_2vzvres',
         e.target,
-        'YOUR_USER_ID'
+        'email_80ac38bdd65138961605a3ec'
       )
       .then(
         (result) => {
-          console.log('Email sent successfully:', result.text);
+          toast.success('Email sent successfully:', result.text);
         },
         (error) => {
-          console.error('Error sending email:', error.text);
+          toast.error('Error sending email:', error.text);
         }
       );
 
@@ -29,6 +33,7 @@ const Help = () => {
     <section id="help">
       <div className="container">
         <div className="help_wrapper">
+        <ToastContainer />
            <img src={HelpImg} id='help-img'  alt="image" />
           <div className="card_right">
             <div className="form">

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const apiUrl = 'https://ntbackend.onrender.com/'; // Replace with your API URL
+const apiUrl = 'https://ntbackend.onrender.com'; // Replace with your API URL
 
 const CourseForm = () => {
   const initialFormData = {
