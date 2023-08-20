@@ -7,6 +7,7 @@ import Workplaces from './pages/workplace'
 import Comments from './pages/comments'
 import Help from './pages/help'
 import Footer from './components/footer'
+import AuthPage from './pages/auth'
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
     <Comments/>
     <Help/>
     <Footer/>
+    <AuthPage/>
     </div>
   )
 }

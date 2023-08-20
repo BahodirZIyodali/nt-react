@@ -4,7 +4,8 @@
    margin: 0;
     padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth
+  ;
 }
 
 h1,
@@ -17,7 +18,9 @@ p {
   margin: 0;
   padding: 0;
 }
-
+body{
+  overflow-x: hidden;
+}
 .container {
   max-width: 1182px;
   margin: 0 auto;
@@ -49,7 +52,14 @@ p {
   src: url(/assets/fonts/Lato-Heavy.ttf);
 }
 
-/* ----HEADER SECTION-START---- */
+
+
+
+
+
+
+
+/* Header Section Styles */
 
 header {
   width: 100%;
@@ -106,11 +116,15 @@ header .nav__btn {
   font-size: 16px;
   line-height: 22px;
   border: 1px solid #ffffff;
-  border: blue;
   cursor: pointer;
 }
 
-header .nav button:hover {
+header .nav__btn {
+  border: 1px solid #fff;
+  background: #fff;
+  color: #000000;
+}
+header .nav__btn:hover {
   border: 1px solid #bd8f5b;
   background: ivory;
   color: #000000;
@@ -119,10 +133,61 @@ header .nav button:hover {
 header .nav img {
   cursor: pointer;
 }
+.menu-icon {
+  display: none; 
+  cursor: pointer;
+}
 
-/* ----HEADER SECTION-END---- */
+
+
+
+@media (max-width: 767px) {
+  header .nav__btn {
+    border: 1px solid #fff;
+    background: ivory;
+    color: #000000;
+    margin-left: 40px;
+  }
+  
+  
+  .nav__items.open {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #fff; /* Adjust background color as needed */
+  position: absolute;
+  top: 0 ;
+  left: 0;
+  width: 40%; 
+  height: 100vh;
+  box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1); /* Add box shadow for a nice effect */
+  z-index: 2;
+  transform: translateX(0); /* Show the menu using transform */
+  transition: transform 0.3s ease-in-out, opacity 1s ease-in-out;
+  opacity: 1; 
+
+}
+  .nav__items .close{
+    opacity: 0; 
+  }
+
+
+  .menu-icon {
+    display: block; /* Show the menu icon */
+    cursor: pointer;
+  }
+
+  .menu-icon.open {
+    display: block; 
+  }
+
+}
+
+
 
 /* ----INTRO SECTION-START---- */
+
+/* Intro Section Styles */
 
 #intro {
   display: flex;
@@ -192,9 +257,43 @@ header .nav img {
   color: #000000;
 }
 
-/* ----INTRO SECTION-END---- */
+/* Media Queries */
 
-/* ----ADVANTAGES SECTION-START---- */
+@media screen and (max-width: 1000px) {
+  .bg-img{
+    display: none;
+  }
+  #intro {
+    margin-top: 100px; /* Adjust margin for smaller screens */
+  }
+
+  #intro .intro_text {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  #intro h1 {
+    font-size: 36px;
+  }
+  .animated-text{
+    margin-left: -70px;
+  }
+
+  #intro p {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+
+  #intro button {
+    margin-top: 30px; /* Adjust margin for smaller screens */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/* Advantages Section Styles */
 
 #advantages {
   width: 100%;
@@ -274,7 +373,53 @@ header .nav img {
   border-radius: 12px;
 }
 
-/* ----ADVANTAGES SECTION-END---- */
+
+/* Media Queries */
+
+@media screen and (max-width: 1000px) {
+  #advantages .advantages_wrapper {
+    justify-content: center;
+  }
+
+  #advantages .advantages_card {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  #advantages .more {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #advantages h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  #advantages .advantages_card {
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  #advantages .advantages_card .advantages_text h2 {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  #advantages .advantages_card .advantages_text p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  #advantages .more h3 {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
 
 /* ----KURSLAR SECTION-START---- */
 
@@ -324,10 +469,11 @@ header .nav img {
   gap: 12px;
   width: 254.5px;
   height: 97px;
-  border: 1px solid #607987;
+  background-color: #fff;
+  border: 1px solid #918f8f;
+
   border-radius: 4px;
 }
-
 
 #kurslar .kurslar_card h2 {
   font-family: "Lato Bold";
@@ -359,6 +505,47 @@ header .nav img {
   text-decoration: none;
   transition: all 0.5s ease;
 }
+/* Media Queries */
+
+@media screen and (max-width: 700px) {
+  #kurslar {
+    height: auto;
+    padding: 24px 0;
+  }
+
+  #kurslar h1 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  #kurslar .kurslar_elements {
+    align-items: center;
+  }
+
+  #kurslar .kurslar_wrapper {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  #kurslar .kurslar_card {
+    width: 100%;
+    padding: 16px;
+    height: auto;
+  }
+
+  #kurslar .kurslar_card h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  #kurslar .kurslar_card p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+
+
 
 /* ----KURSLAR SECTION-END---- */
 
@@ -454,6 +641,7 @@ header .nav img {
   margin-top: 48px;
 }
 
+
 #izohlar .izohlar_card1 {
   display: flex;
   flex-direction: column;
@@ -473,7 +661,7 @@ header .nav img {
   background-repeat: no-repeat;
 }
 
-#izohlar .izohlar_card2 {
+.izohlar_card2 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -654,6 +842,83 @@ header .nav img {
   background-image: url(../src/assets/images/student4.png);
   background-repeat: no-repeat;
 }
+/* Media Queries */
+
+@media screen and (max-width: 700px) {
+  #izohlar {
+    height: auto;
+    padding: 24px 0;
+  }
+
+  #izohlar h1 {
+    font-size: 28px;
+    line-height: 36px;
+    margin: 32px 0 16px;
+  }
+
+  #izohlar .commets_about {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  #izohlar .izohlar_wrapper {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .izohlar_card1,
+  .izohlar_card2,
+  .izohlar_card3,
+  .izohlar_card4 {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    gap: 16px;
+  }
+
+  #izohlar .watch,
+  #izohlar a {
+    padding: 4px;
+    gap: 6px;
+  }
+
+  #izohlar .watch .video_link,
+  #izohlar a .video_link {
+    font-size: 10px;
+    line-height: 18px;
+  }
+
+  #izohlar .watch span,
+  #izohlar a span {
+    width: 18px;
+    height: 18px;
+  }
+
+  #izohlar .izohlar_text {
+    gap: 4px;
+  }
+
+  #izohlar .izohlar_text .date,
+  #izohlar .izohlar_text .job,
+  #izohlar .izohlar_text h4 {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .comments_card1,
+  .comments_card2,
+  .comments_card3,
+  .comments_card4 {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    gap: 16px;
+  }
+}
+
 
 /* ----IZOHLAR SECTION-END---- */
 
@@ -680,6 +945,7 @@ header .nav img {
   border-radius: 20px;
   gap: 32px;
 }
+
 
 #help .help_wrapper .card_right {
   padding: 32px 126px 32px 32px;
@@ -781,6 +1047,75 @@ header .nav img {
   color: #000000;
   cursor: pointer;
 }
+
+/* Media Queries */
+
+@media screen and (max-width: 700px) {
+  #help {
+    padding: 20px 0;
+  }
+
+  #help h1 {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  #help .help_wrapper {
+    flex-direction: column;
+    gap: 24px;
+    border-radius: 16px;
+  }
+
+  #help .help_wrapper .card_right {
+    padding: 24px 16px;
+  }
+
+  #help .help_wrapper .card_right .form {
+    padding: 32px 16px;
+  }
+
+  #help .help_wrapper .card_right .form .form_text {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 12px 0 24px 0;
+  }
+
+  #help .help_wrapper .card_right .form .forms {
+    width: 100%;
+    padding: 12px 14px;
+  }
+
+  #help .help_wrapper .card_right .form .name,
+  #help .help_wrapper .card_right .form .pn {
+    gap: 4px;
+  }
+
+  #help .help_wrapper .card_right .form .name p,
+  #help .help_wrapper .card_right .form .pn .phone_n-input_t {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  #help .help_wrapper .card_right .form .request_text {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 24px 0 16px 0;
+  }
+
+  #help .help_wrapper .card_right .form .request {
+    padding: 10px 112px 10px 112px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  #help .help_wrapper .card_right .form button:hover {
+    border: 1px solid #bd8f5b;
+    background: #ffffff;
+    color: #000000;
+    cursor: pointer;
+  }
+}
+
 
 /* ----HELP SECTION-END---- */
 
@@ -901,6 +1236,60 @@ footer .footer_card_bottom .raqam {
   letter-spacing: -0.36px;
   color: #607987;
 }
+
+/* Media Queries */
+
+@media screen and (max-width: 700px) {
+  footer {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  footer .footer_wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  footer .top_card {
+    width: 100%;
+    text-align: center;
+    gap: 16px;
+  }
+
+  footer .footer_card {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  footer hr {
+    margin-left: 0;
+  }
+
+  footer .bottom_wrapper {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 24px;
+    padding-bottom: 40px;
+  }
+
+  footer .footer_card_bottom ul {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  footer .footer_card_bottom a,
+  footer .footer_card_bottom p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  footer .footer_card_bottom .raqam {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
 
 /* ----FOOTER SECTION-END---- */
 
@@ -1271,4 +1660,89 @@ a:hover {
 
 
 /* ----KURSLAR PAGE-START---- */
+
+
+
+::-webkit-scrollbar {
+  width: 6px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b1732b; /* Color of the thumb */
+  border-radius: 10%;
+
+}
+
+
+
+
+
+
+
+
+
+/* auth */
+.form-container {
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  width: 300px;
+}
+
+.title {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.select-field {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  height: 35px;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.toggle-link {
+  text-align: center;
+  margin-top: 10px;
+  cursor: pointer;
+  color: #007bff;
+}
+
+.toggle-link:hover {
+  text-decoration: underline;
+}
+
+
+
+
 
